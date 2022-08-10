@@ -11,8 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-screen min-h-screen flex flex-col flex-wrap justify-center bg-gradient-to-bl from-indigo-300 to-rose-100 via-purple-300">
-        <h1 className="text-center text-4xl md:text-6xl lg:text-7xl xl:text-8xl p-4 pt-20 font-bold text-purple-100">
+      <main className="w-screen min-h-screen flex flex-col flex-wrap justify-center items-center bg-gradient-to-bl from-indigo-300 to-rose-100 via-purple-300">
+        <h1 className="text-center text-4xl md:text-6xl lg:text-7xl xl:text-8xl p-4 font-bold text-purple-100">
           Blurb Buddy 📝
         </h1>
         <div>
