@@ -38,7 +38,7 @@ export default function BlurbBuddy() {
           Blurb Buddy 📝
         </h1>
         <div className="flex flex-col flex-wrap">
-          <div className="bg-purple-100 bg-opacity-70 rounded-xl m-2 text-center flex flex-col justify-center m-4 p-4">
+          <div className="flex flex-col justify-center p-2 m-4 bg-purple-100 bg-opacity-70 rounded-xl max-w-[75vw]">
             <div>
               <p className="text-xl lg:text-2xl text-purple-800 font-bold p-2 m-4">Describe your book below and Blurb Buddy will generate a blurb for you!</p>
             </div>
@@ -47,7 +47,7 @@ export default function BlurbBuddy() {
               <button onClick={(e) => submitData(e)} className="m-2 bg-white bg-opacity-90 text-xl max-w-fit rounded-xl p-2 text-purple-800">Generate Blurb</button>
             </form>
           </div>
-          <div className="flex flex-col jsutify-center p-2 m-4 bg-purple-100 bg-opacity-70 rounded-xl max-w-[75vw]">
+          <div className="flex flex-col justify-center p-2 m-4 bg-purple-100 bg-opacity-70 rounded-xl max-w-[75vw]">
             <h3 className="text-xl font-bold p-2 m-4 text-purple-600">Results:</h3>
             {generating && <p className="p-2 m-4 text-purple-600">generating blurb...</p>}
             {results && !generating &&

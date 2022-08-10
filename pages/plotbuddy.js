@@ -38,7 +38,7 @@ export default function PlotBuddy() {
           Plot Buddy 📖
         </h1>
         <div className="flex flex-col flex-wrap">
-          <div className="bg-purple-100 bg-opacity-70 rounded-xl m-2 text-center flex flex-col justify-center m-4 p-4">
+          <div className="flex flex-col jsutify-center p-2 m-4 bg-purple-100 bg-opacity-70 rounded-xl max-w-[75vw]">
             <div>
               <p className="text-xl lg:text-2xl text-purple-800 font-bold p-2 m-4">Describe your book below and Plot Buddy will generate a plot for you!</p>
             </div>
