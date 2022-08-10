@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import MenuIcon from '@heroicons/react/solid/MenuIcon'
 import XIcon from '@heroicons/react/solid/XCircleIcon'
@@ -9,6 +9,7 @@ import XIcon from '@heroicons/react/solid/XCircleIcon'
 export default function Header() {
     const { data: session } = useSession();
     const [ menu, setMenu ] = useState(false);
+
     return (
         <div className="w-screen bg-purple-500">
             <p className=" bg-purple-800 text-indigo-100 text-sm lg:text-md text-center p-2"> ✨ AI text generation for writers ✨ </p>
@@ -39,7 +40,7 @@ export default function Header() {
             {menu &&
                 <div className="w-screen bg-gradient-to-bl from-indigo-500 to-purple-500 text-purple-100">
                 
-                <div className="flex flex-col h-full">
+                <div className="flex flex-col h-full" onClick={() => setMenu(false)}>
                     <Link href="/namebuddy">
                         <button className="p-2 m-2 font-bold hover:bg-purple-100 hover:text-purple-700 transition-all rounded-xl">Name Buddy</button>
                     </Link>
