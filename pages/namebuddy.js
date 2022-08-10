@@ -6,6 +6,7 @@ import SubscriptionOptions from '../components/subscriptionoptions'
 export default function NameBuddy() {
   const [ text, setText ] = useState('');
   const [ results, setResults ] = useState('')
+  const [ surnameresults, setSurnameResults ] = useState('')
   const [ generating, setGenerating ] = useState(false);
 
 
@@ -19,9 +20,17 @@ export default function NameBuddy() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
      });
-     const data = await await response.json();
+     const data = await response.json();
      const resultdata = data.textresponse.text;
-     setResults(resultdata);
+     const response2 = await fetch(`/api/lastnamerequest`, {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+     });
+     const data2 = await response2.json();
+     const resultdata2 = data2.textresponse.text;
+     setResults(resultdata)
+     setSurnameResults(resultdata2);
      setGenerating(false);
     } 
 
@@ -35,7 +44,7 @@ export default function NameBuddy() {
 
       <main className="w-screen min-h-screen flex flex-col flex-wrap justify-center content-center bg-gradient-to-bl from-indigo-300 to-rose-100 via-purple-300">
         <h1 className="text-center text-4xl md:text-6xl lg:text-7xl xl:text-8xl p-4 font-bold text-purple-100">
-          Name Buddy 📝
+          Name Buddy 🙋‍♀️
         </h1>
         <div className="flex flex-col flex-wrap">
           <div className="bg-purple-100 bg-opacity-70 rounded-xl m-2 text-center flex flex-col justify-center m-4 p-4">
@@ -51,8 +60,15 @@ export default function NameBuddy() {
             <h3 className="text-xl font-bold p-2 m-4 text-purple-600">Results:</h3>
             {generating && <p className="p-2 m-4 text-purple-600">generating names...</p>}
             {results && !generating &&
-              <div>
-                <p className="p-2 m-4 text-purple-600 text-xl">{results}</p>
+              <div className="flex flex-col flex-wrap p-2 m-2">
+                <div>
+                  <h4 className="p-2 m-4 text-purple-600 text-xl font-bold">First names:</h4>
+                  <p className="p-2 m-4 text-purple-600 text-lg">{results}</p>
+                </div>
+                <div>
+                <h4 className="p-2 m-4 text-purple-600 text-xl font-bold">Last names:</h4>
+                  <p className="p-2 m-4 text-purple-600 text-lg">{surnameresults}</p>
+                </div>
               </div>
             }
           </div>

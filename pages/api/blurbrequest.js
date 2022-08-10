@@ -8,7 +8,7 @@ const openai = new OpenAIApi(configuration);
 
 export default async function handler(req, res) {
     const enteredtext = req.body;
-    const query = "Write an exciting, descriptive 200 word blurb for a Kindle book with this summary: " + enteredtext + ".";
+    const query = "Write an exciting, descriptiveå word blurb for a Kindle book with this summary: " + enteredtext + ".";
     console.log(query)
     console.log(enteredtext)
         const response = await openai.createCompletion({

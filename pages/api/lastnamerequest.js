@@ -8,7 +8,7 @@ const openai = new OpenAIApi(configuration);
 
 export default async function handler(req, res) {
     const enteredtext = req.body;
-    const query = "Generate ten original names for a person with this description: " + enteredtext + ".  They should not be famous names.   Use baby name books as a source.  Half should be unusual names.  Half should be common names.";
+    const query = "Generate ten original surnames for a person with this description: " + enteredtext + ".  They should each be a last name (surname).  They should not be famous names.   Use baby name books as a source.  Half should be unusual names.  Half should be common names.";
     console.log(query)
     console.log(enteredtext)
         const response = await openai.createCompletion({

@@ -35,7 +35,7 @@ export default function PlotBuddy() {
 
       <main className="w-screen min-h-screen flex flex-col flex-wrap justify-center content-center bg-gradient-to-bl from-indigo-300 to-rose-100 via-purple-300">
         <h1 className="text-center text-4xl md:text-6xl lg:text-7xl xl:text-8xl p-4 font-bold text-purple-100">
-          Name Buddy 📝
+          Plot Buddy 📖
         </h1>
         <div className="flex flex-col flex-wrap">
           <div className="bg-purple-100 bg-opacity-70 rounded-xl m-2 text-center flex flex-col justify-center m-4 p-4">

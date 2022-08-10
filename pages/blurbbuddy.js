@@ -40,7 +40,7 @@ export default function BlurbBuddy() {
         <div className="flex flex-col flex-wrap">
           <div className="bg-purple-100 bg-opacity-70 rounded-xl m-2 text-center flex flex-col justify-center m-4 p-4">
             <div>
-              <p className="text-xl lg:text-2xl text-purple-800 font-bold p-2 m-4">Write a brief description of your book below and Blurb Buddy will generate a blurb for you!</p>
+              <p className="text-xl lg:text-2xl text-purple-800 font-bold p-2 m-4">Describe your book below and Blurb Buddy will generate a blurb for you!</p>
             </div>
             <form className="flex flex-col justify-center items-center p-2 m-4">
               <textarea type="text" onChange={(e) => setText(e.target.value)} className="p-2 rounded-xl m-2 text-purple-900 min-h-full min-w-full focus:outline-none"></textarea>
